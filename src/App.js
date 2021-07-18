@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ApiState from './context/getdetails/ApiState';
+// import ApiContext from './context/getdetails/apiContext';
+import Details from './components/Details';
+import Nav from './components/Nav';
 
-function App() {
+const App = () => {
+
+  // const apiContext = useContext(ApiContext);
+
+  // const {data,api} = apiContext;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ 
+    <ApiState>
+        <Nav />
+        <Details/>
+    </ApiState>
+  
   );
+
 }
 
 export default App;
